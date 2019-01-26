@@ -15,11 +15,23 @@ public class GameHandler : MonoBehaviour {
     [SerializeField]
     GameObject[] Waifus;
 
+    public bool AtWork;
+    public GameObject EnergyBar;
 	void Start ()
     {
         StartCoroutine("DayCycle");
 	}
-	
+    void Update()
+    {
+        if (AtWork == true)
+        {
+            EnergyBar.SetActive(true);
+        }
+        else
+        {
+            EnergyBar.SetActive(false);
+        }
+    }
     public void FurnitureActivator(int Furniture)
     {
         if (Furniture == 0)
