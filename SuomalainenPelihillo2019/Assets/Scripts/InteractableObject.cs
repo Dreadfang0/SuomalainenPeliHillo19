@@ -7,6 +7,8 @@ public class InteractableObject : MonoBehaviour {
     [SerializeField]
     bool IsFurniture;
     [SerializeField]
+    bool Coffemaker;
+    [SerializeField]
     int FurnitureID;
     [SerializeField]
     int FurnitureValue;
@@ -14,7 +16,7 @@ public class InteractableObject : MonoBehaviour {
     int PersonID;
     
     public int PersonInteractionPerDay;
-
+    public PlayerInputReader Work;
     public GameHandler GM;
     
     void Start ()
@@ -42,6 +44,13 @@ public class InteractableObject : MonoBehaviour {
                     {
                         Debug.Log("You poor, Boi");
                     }
+                }
+            }
+            if (Coffemaker == true)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    Work.energy = Work.energyAmount;
                 }
             }
             else
