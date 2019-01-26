@@ -9,7 +9,7 @@ public class PlayerInputReader : MonoBehaviour {
     public GameHandler GM;
     public int munies = 0;
 
-    List<string> allowed = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "W", "V", "X", "Y", "Z" };
+    List<string> allowed = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "Y", "W", "V", "X", "Y", "Z"};
     public List<string> usedKeys = new List<string>();
 
     // Use this for initialization
