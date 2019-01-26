@@ -12,8 +12,8 @@ public class InteractableObject : MonoBehaviour {
     int FurnitureValue;
     [SerializeField]
     int PersonID;
-    [SerializeField]
-    int PersonInteractionPerDay;
+    
+    public int PersonInteractionPerDay;
 
     public GameHandler GM;
     
@@ -22,10 +22,6 @@ public class InteractableObject : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")

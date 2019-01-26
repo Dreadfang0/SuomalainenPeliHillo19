@@ -344,7 +344,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777646702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.73, y: 0.09, z: -0.055319488}
+  m_LocalPosition: {x: 3.91, y: 0.09, z: -0.055319488}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -726,13 +726,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Weekday: 0
+  GameState: 0
   Money: 3
+  DayLength: 5
   HomeFurniture:
   - {fileID: 305710434}
   - {fileID: 1890415604}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Waifus:
+  - {fileID: 1073323052}
 --- !u!1 &1765098343
 GameObject:
   m_ObjectHideFlags: 0

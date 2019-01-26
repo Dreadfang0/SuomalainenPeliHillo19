@@ -5,23 +5,21 @@ using UnityEngine;
 public class GameHandler : MonoBehaviour {
 
     public int Weekday;
-    int GameState;
+    public int GameState;
     public int Money;
     int PersonLikeYou;
-    
+    [SerializeField]
+    int DayLength;
     [SerializeField]
     GameObject[] HomeFurniture;
-	// Use this for initialization
+    [SerializeField]
+    GameObject[] Waifus;
+
 	void Start ()
     {
-		
+        StartCoroutine("DayCycle");
 	}
 	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
     public void FurnitureActivator(int Furniture)
     {
         if (Furniture == 0)
@@ -61,13 +59,27 @@ public class GameHandler : MonoBehaviour {
             }
         }
     }
+    IEnumerator DayCycle()
+    {
+        Debug.Log("Start of a new day");
+        yield return new WaitForSeconds(DayLength);
+        DayChange();
+        
+    }
     public void DayChange()
     {
         Weekday++;
+        Debug.Log("Day "+Weekday+" has passed");
         if (Weekday == 7)
         {
+            Debug.Log("Years have passed!?");
             GameState++;
             Weekday = 0;
+        }
+        StartCoroutine("DayCycle");
+        foreach (GameObject Waifu in Waifus)
+        {
+            Waifu.GetComponent<InteractableObject>().PersonInteractionPerDay = 1;
         }
     }
 }
