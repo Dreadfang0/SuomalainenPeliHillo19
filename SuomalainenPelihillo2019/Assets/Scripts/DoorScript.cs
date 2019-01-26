@@ -4,16 +4,58 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour {
 
-
-
+    
+    private UI uielement;
+    public Transform targetPosition;
 	// Use this for initialization
 	void Start ()
     {
+        uielement = GameObject.FindGameObjectWithTag("GameController").GetComponent<UI>();
+	}
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            uielement.InputText.text = ("[Space] to Exit");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                new WaitForSeconds(2);
+                StartCoroutine("FadeToClear");
+                collision.transform.position = targetPosition.position;
+            }
+                
+        }
+
+    }
+    
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        uielement.InputText.text = (" ");
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public SpriteRenderer fadeOverlay;
+    public float fadeTime;
+    public IEnumerator FadeToClear()
+    {
+        fadeOverlay.gameObject.SetActive(true);
+        fadeOverlay.color = Color.black;
+        
+        float rate = 1.0f / fadeTime;
+
+        float progress = 0.0f;
+
+        while (progress < 1.0f)
+        {
+            fadeOverlay.color = Color.Lerp(Color.black, Color.clear, progress);
+            progress += rate * Time.deltaTime;
+            yield return null;
+        }
+        fadeOverlay.color = Color.clear;
+        fadeOverlay.gameObject.SetActive(false);
+    }
 }

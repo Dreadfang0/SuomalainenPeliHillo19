@@ -25,11 +25,11 @@ public class GameHandler : MonoBehaviour {
     {
         if (AtWork == true)
         {
-            EnergyBar.SetActive(true);
+            //EnergyBar.SetActive(true);
         }
         else
         {
-            EnergyBar.SetActive(false);
+            //EnergyBar.SetActive(false);
         }
     }
     public void FurnitureActivator(int Furniture)
@@ -68,6 +68,10 @@ public class GameHandler : MonoBehaviour {
             else
             {
                 Debug.Log("Im bUsY");
+            }
+            if (PersonLikeYou == 5)
+            {
+
             }
         }
     }
