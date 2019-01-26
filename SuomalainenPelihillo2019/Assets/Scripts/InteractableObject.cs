@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour {
 
@@ -14,7 +15,8 @@ public class InteractableObject : MonoBehaviour {
     int FurnitureValue;
     [SerializeField]
     int PersonID;
-    
+
+    public Text FurnitureText;
     public int PersonInteractionPerDay;
     public PlayerInputReader Work;
     public GameHandler GM;
@@ -31,6 +33,19 @@ public class InteractableObject : MonoBehaviour {
             
             if (IsFurniture == true)
             {
+                
+                if(FurnitureID == 0)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
+                if (FurnitureID == 1)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
+                if (FurnitureID == 2)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
+                if (FurnitureID == 3)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
+                if (FurnitureID == 4)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
+                if (FurnitureID == 5)
+                    FurnitureText.text = ("[Space] to Purchase Bed");
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     if (GM.Money >= FurnitureValue)

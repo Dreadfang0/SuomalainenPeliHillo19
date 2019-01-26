@@ -1,23 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoorScript : MonoBehaviour {
 
+    public Text InputText;
     
-    private UI uielement;
     public Transform targetPosition;
 	// Use this for initialization
 	void Start ()
     {
-        uielement = GameObject.FindGameObjectWithTag("GameController").GetComponent<UI>();
+        
 	}
 
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            uielement.InputText.text = ("[Space] to Exit");
+            InputText.text = ("[Space] to Exit");
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 new WaitForSeconds(2);
@@ -31,7 +32,7 @@ public class DoorScript : MonoBehaviour {
     
     void OnTriggerExit2D(Collider2D collision)
     {
-        uielement.InputText.text = (" ");
+        InputText.text = (" ");
     }
 
     // Update is called once per frame
