@@ -7,6 +7,7 @@ public class GameHandler : MonoBehaviour {
     public int Weekday;
     public int GameState;
     public int Money;
+    public int HomeOMeter;
     int PersonLikeYou;
     [SerializeField]
     int DayLength;
@@ -17,6 +18,9 @@ public class GameHandler : MonoBehaviour {
 
     public bool AtWork;
     public GameObject EnergyBar;
+    [SerializeField]
+    ParticleSystem CashParticle;
+
 	void Start ()
     {
         StartCoroutine("DayCycle");
@@ -34,27 +38,97 @@ public class GameHandler : MonoBehaviour {
     }
     public void FurnitureActivator(int Furniture)
     {
+        CashParticle.Play();
         if (Furniture == 0)
         {
             HomeFurniture[0].SetActive(true);
+            HomeOMeter++;
         }
         if (Furniture == 1)
         {
             HomeFurniture[1].SetActive(true);
+            HomeOMeter++;
         }
         if (Furniture == 2)
         {
             HomeFurniture[2].SetActive(true);
+            HomeOMeter++;
         }
         if (Furniture == 3)
         {
             HomeFurniture[3].SetActive(true);
+            HomeOMeter++;
         }
         if (Furniture == 4)
         {
             HomeFurniture[4].SetActive(true);
+            HomeOMeter++;
         }
-
+        if (Furniture == 5)
+        {
+            HomeFurniture[5].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 6)
+        {
+            HomeFurniture[6].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 7)
+        {
+            HomeFurniture[7].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 8)
+        {
+            HomeFurniture[8].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 9)
+        {
+            HomeFurniture[9].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 10)
+        {
+            HomeFurniture[10].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 11)
+        {
+            HomeFurniture[11].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 12)
+        {
+            HomeFurniture[12].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 13)
+        {
+            HomeFurniture[13].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 14)
+        {
+            HomeFurniture[14].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 15)
+        {
+            HomeFurniture[15].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 16)
+        {
+            HomeFurniture[16].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 17)
+        {
+            HomeFurniture[17].SetActive(true);
+            HomeOMeter++;
+        }
     }
     public void PersonInteraction(int Person, bool Busy)
     {
@@ -86,6 +160,7 @@ public class GameHandler : MonoBehaviour {
     {
         Weekday++;
         Debug.Log("Day "+Weekday+" has passed");
+        HomeOMeter--;
         if (Weekday == 7)
         {
             Debug.Log("Years have passed!?");

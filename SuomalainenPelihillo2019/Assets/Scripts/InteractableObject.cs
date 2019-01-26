@@ -15,7 +15,7 @@ public class InteractableObject : MonoBehaviour {
     int FurnitureValue;
     [SerializeField]
     int PersonID;
-
+    bool Interacting;
     public Text FurnitureText;
     public int PersonInteractionPerDay;
     public PlayerInputReader Work;
@@ -25,16 +25,14 @@ public class InteractableObject : MonoBehaviour {
     {
 		
 	}
-	
-    private void OnTriggerStay2D(Collider2D collision)
+    void Update()
     {
-        if (collision.tag == "Player")
+        if (Interacting == true)
         {
-            
             if (IsFurniture == true)
             {
-                
-                if(FurnitureID == 0)
+
+                if (FurnitureID == 0)
                     FurnitureText.text = ("[Space] to Purchase Bed(BR) for");
                 if (FurnitureID == 1)
                     FurnitureText.text = ("[Space] to Purchase Couples' Bed(BR) for");
@@ -153,8 +151,17 @@ public class InteractableObject : MonoBehaviour {
             }
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Interacting = true;
+            
+        }
+    }
     void OnTriggerExit2D(Collider2D collision)
     {
         FurnitureText.text = (" ");
+        Interacting = false;
     }
 }
