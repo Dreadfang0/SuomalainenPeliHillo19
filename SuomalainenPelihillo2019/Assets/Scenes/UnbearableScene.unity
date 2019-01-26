@@ -474,7 +474,6 @@ GameObject:
   - component: {fileID: 777646706}
   - component: {fileID: 777646705}
   - component: {fileID: 777646704}
-  - component: {fileID: 777646703}
   - component: {fileID: 777646707}
   - component: {fileID: 777646708}
   m_Layer: 0
@@ -484,26 +483,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &777646703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 777646702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 641e0f7d2325de54ca37743e9f31e86b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsFurniture: 1
-  Coffemaker: 0
-  FurnitureID: 1
-  FurnitureValue: 0
-  PersonID: 0
-  FurnitureText: {fileID: 0}
-  PersonInteractionPerDay: 0
-  Work: {fileID: 0}
-  GM: {fileID: 1725110630}
 --- !u!61 &777646704
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -619,7 +598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85e45434889cca34d9f6ca000c1ecd99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1
+  movementSpeed: 2
+  WorkStation: {fileID: 674744612}
 --- !u!1 &996141953
 GameObject:
   m_ObjectHideFlags: 0

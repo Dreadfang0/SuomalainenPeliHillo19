@@ -6,13 +6,16 @@ public class PlayerController : MonoBehaviour {
     public static PlayerController instance;
     [SerializeField] // Komento = Alla olevaa arvoa voi muuttaa Unityssä
     private float movementSpeed;
-	void Start () {
+    [SerializeField]
+    PlayerInputReader WorkStation;
+    void Start () {
         instance = this;
 	}
 	
 	
 	void Update () {
-        HandleMovementInput();
+        if(WorkStation.Working == false)
+            HandleMovementInput();
         //HandleRotationInput();
        
     }

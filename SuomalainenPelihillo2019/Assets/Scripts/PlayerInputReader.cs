@@ -55,9 +55,13 @@ public class PlayerInputReader : MonoBehaviour {
 
     void exhaustion()
     {
-        if(energy >= 0)
+        if (energy >= 0)
         {
             energy -= Time.deltaTime;
+        }
+        else
+        {
+            Working = false;
         }
     }
 
