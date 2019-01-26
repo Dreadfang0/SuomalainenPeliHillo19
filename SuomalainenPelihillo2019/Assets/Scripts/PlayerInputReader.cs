@@ -48,7 +48,6 @@ public class PlayerInputReader : MonoBehaviour {
         if(energy >= 1)
         {
             energy -= Time.deltaTime;
-            Mathf.Round(energy);
         }
     }
 
