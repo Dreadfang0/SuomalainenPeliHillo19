@@ -68,7 +68,7 @@ public class InteractableObject : MonoBehaviour {
                     Work.energy = Work.energyAmount;
                 }
             }
-            else
+            if (IsFurniture == false && Coffemaker == false)
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
