@@ -46,6 +46,10 @@ public class GameHandler : MonoBehaviour {
     Transform SpawnPoint;
     [SerializeField]
     Transform Shop;
+    public GameObject GKidScreen;
+    public GameObject KidScreen;
+    public GameObject JustWaifuScreen;
+    public GameObject LoenlyScreen;
     /*
     // Soundfx
     [SerializeField]
@@ -302,19 +306,19 @@ public class GameHandler : MonoBehaviour {
             {
                 if (WaifuDateWeek == 0)
                 {
-                    // Insert Grandkids Ending
+                    GKidScreen.SetActive(true);
                 }
                 if (WaifuDateWeek == 1)
                 {
-                    // Insert Kids Ending
+                    KidScreen.SetActive(true);
                 }
                 if (WaifuDateWeek == 2)
                 {
-                    // Insert JustWaifu Ending
+                    JustWaifuScreen.SetActive(true);
                 }
                 if (WaifuDateWeek == -1)
                 {
-                    // Insert Wizard Ending
+                    LoenlyScreen.SetActive(true);
                 }
             }
         }
