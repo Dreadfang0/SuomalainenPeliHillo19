@@ -2593,7 +2593,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &551263945
 Prefab:
@@ -2632,7 +2632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4479025573977176, guid: a9fd9fc3dd5318146a5b3c1c24bd5061, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a9fd9fc3dd5318146a5b3c1c24bd5061, type: 2}
@@ -4767,7 +4767,7 @@ MonoBehaviour:
   InputText: {fileID: 1740622455}
   targetPosition: {fileID: 125176513}
   fadeOverlay: {fileID: 1437655921}
-  fadeTime: 0
+  fadeTime: 2
 --- !u!61 &866403832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5240,7 +5240,7 @@ MonoBehaviour:
   InputText: {fileID: 1740622455}
   targetPosition: {fileID: 2053476732}
   fadeOverlay: {fileID: 1437655921}
-  fadeTime: 0
+  fadeTime: 2
 --- !u!61 &969226202
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7536,8 +7536,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 927027413
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be9119304f7ee49428430c9c34c677d8, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
@@ -8742,7 +8742,7 @@ MonoBehaviour:
   InputText: {fileID: 1740622455}
   targetPosition: {fileID: 1934378491}
   fadeOverlay: {fileID: 1437655921}
-  fadeTime: 0
+  fadeTime: 2
 --- !u!61 &1663554995
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10546,7 +10546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 91393965}
   targetOffset: {x: 0, y: 0, z: -10}
-  movementSpeed: 5
+  movementSpeed: 15
 --- !u!1 &1934378490
 GameObject:
   m_ObjectHideFlags: 0
