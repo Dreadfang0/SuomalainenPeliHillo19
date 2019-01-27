@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: sky
+    uniqueID: 860511145
+    locked: 0
+  - name: sunNmoon
+    uniqueID: 3311213507
+    locked: 0
   - name: Background
     uniqueID: 2062502475
     locked: 0
