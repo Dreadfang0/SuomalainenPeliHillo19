@@ -42,83 +42,52 @@ public class InteractableObject : MonoBehaviour {
             {
 
                 if (FurnitureID == 0)
-                    FurnitureText.text = ("[Space] to Purchase Bed(BR) for");
+                    FurnitureText.text = ("[Space] to Purchase Bed for");
                 if (FurnitureID == 1)
-                    FurnitureText.text = ("[Space] to Purchase Couples' Bed(BR) for");
+                    FurnitureText.text = ("[Space] to Purchase Couples' Bed for");
                 if (FurnitureID == 2)
-                    FurnitureText.text = ("[Space] to Purchase Sofa(LR) for ");
+                    FurnitureText.text = ("[Space] to Purchase Sofa for ");
                 if (FurnitureID == 3)
-                    FurnitureText.text = ("[Space] to Purchase Armchair(LR) for ");
+                    FurnitureText.text = ("[Space] to Purchase Television for");
                 if (FurnitureID == 4)
-                    FurnitureText.text = ("[Space] to Purchase Television(LR) for");
+                    FurnitureText.text = ("[Space] to Purchase WelcomeHome carpet");
                 if (FurnitureID == 5)
-                    FurnitureText.text = ("[Space] to Purchase Work Desk(LR)");
+                    FurnitureText.text = ("[Space] to Purchase Work Desk+computer");
                 if (FurnitureID == 6)
-                    FurnitureText.text = ("[Space] to Purchase Kitchen Table(K)");
+                    FurnitureText.text = ("[Space] to Purchase Kitchen Table");
                 if (FurnitureID == 7)
-                    FurnitureText.text = ("[Space] to Purchase Kitchen Table Chair Set(K)");
+                    FurnitureText.text = ("[Space] to Purchase Kitchen Chair Set");
                 if (FurnitureID == 8)
-                    FurnitureText.text = ("[Space] to Purchase Coffeemaker(K)");
+                    FurnitureText.text = ("[Space] to Purchase Coffeemaker");                        
                 if (FurnitureID == 9)
-                    FurnitureText.text = ("[Space] to Purchase Microwave(K)");
+                    FurnitureText.text = ("[Space] to Purchase Toaster");
                 if (FurnitureID == 10)
-                    FurnitureText.text = ("[Space] to Purchase Blender(K)");
-                if (FurnitureID == 11)
-                    FurnitureText.text = ("[Space] to Purchase Toaster(K)");
-                if (FurnitureID == 12)
-                    FurnitureText.text = ("[Space] to Purchase actual dishes)");
-                if (FurnitureID == 13)
                     FurnitureText.text = ("[Space] to Purchase Carpet(K)");
-                if (FurnitureID == 14)
-                    FurnitureText.text = ("[Space] to Purchase Fruitbowl(K)");
-                if (FurnitureID == 15)
-                    FurnitureText.text = ("[Space] to Purchase Garden Gnome(LEGENDARY)(K)");
-                if (FurnitureID == 16)
+                if (FurnitureID == 11)
+                    FurnitureText.text = ("[Space] to Purchase Fruitbowl");
+                if (FurnitureID == 12)
+                    FurnitureText.text = ("[Space] to Purchase Gnome Curtains(LEGENDARY)");
+                if (FurnitureID == 13)
                     FurnitureText.text = ("[Space] to Purchase carpet(LR)");
+                
+                if (FurnitureID == 14) //////////////
+                    FurnitureText.text = ("[Space] to Purchase small plant");
+                if (FurnitureID == 15)
+                    FurnitureText.text = ("[Space] to Purchase big plant");
+                if (FurnitureID == 16)
+                    FurnitureText.text = ("[Space] to Purchase Home sweet home sign");
                 if (FurnitureID == 17)
-                    FurnitureText.text = ("[Space] to Purchase Piano(LR)");
-                if (FurnitureID == 18) //////////////
-                    FurnitureText.text = ("[Space] to Purchase small plant(LR)");
+                    FurnitureText.text = ("[Space] to Purchase painting");
+                if (FurnitureID == 18)
+                    FurnitureText.text = ("[Space] to Purchase nightstand");
                 if (FurnitureID == 19)
-                    FurnitureText.text = ("[Space] to Purchase medium plant(LR)");
+                    FurnitureText.text = ("[Space] to Purchase Dresser");
                 if (FurnitureID == 20)
-                    FurnitureText.text = ("[Space] to Purchase big plant(LR)");
+                    FurnitureText.text = ("[Space] to Purchase Mirror");
                 if (FurnitureID == 21)
-                    FurnitureText.text = ("[Space] to Purchase Home sweet home sign(LR)");
-                if (FurnitureID == 22)
-                    FurnitureText.text = ("[Space] to Purchase painting(LR)");
-                if (FurnitureID == 23)
-                    FurnitureText.text = ("[Space] to Purchase Better painting?(LR)");
-                if (FurnitureID == 24)
-                    FurnitureText.text = ("[Space] to Purchase Lämp(LR)");
-                if (FurnitureID == 25)
-                    FurnitureText.text = ("[Space] to Purchase a pair of nightstands(BR)");
-                if (FurnitureID == 26)
-                    FurnitureText.text = ("[Space] to Purchase nightstand lämps(BR)");
-                if (FurnitureID == 27)
-                    FurnitureText.text = ("[Space] to Purchase Dresser(BR)");
-                if (FurnitureID == 28)
-                    FurnitureText.text = ("[Space] to Purchase Drawer(BR)");
-                if (FurnitureID == 29)
-                    FurnitureText.text = ("[Space] to Purchase Mirror(BR)");
-                if (FurnitureID == 30)
-                    FurnitureText.text = ("[Space] to Purchase small table(BR)");
-                if (FurnitureID == 31)
-                    FurnitureText.text = ("[Space] to Purchase Painting Rack(LR)");
-                if (FurnitureID == 32)
                     FurnitureText.text = ("[Space] to Purchase carpet(BR)");
-                if (FurnitureID == 33)
-                    FurnitureText.text = ("[Space] to Purchase ...a plant(BR)");
-                if (FurnitureID == 34)
-                    FurnitureText.text = ("[Space] to Purchase carpet(WC)");
-                if (FurnitureID == 35)
-                    FurnitureText.text = ("[Space] to Purchase mirror(WC)");
-                if (FurnitureID == 36)
-                    FurnitureText.text = ("[Space] to Purchase sigh(WC)");
-                if (FurnitureID == 37)
-                    FurnitureText.text = ("[Space] to Purchase shaving kit(WC)");
-                if (FurnitureID == 38)
-                    FurnitureText.text = ("[Space] to Purchase Legendary item(WC)");
+                if (FurnitureID == 22)
+                    FurnitureText.text = ("[Space] to Purchase Bar");
 
 
                 if (Input.GetKeyDown(KeyCode.Space))
