@@ -30,6 +30,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField]
     GameObject CutSceneCamera;
 
+    int WaifuDateWeek = -1;
     public GameObject EnergyBar;
     [SerializeField]
     ParticleSystem CashParticle;
@@ -244,6 +245,8 @@ public class GameHandler : MonoBehaviour {
         MainCamera.SetActive(true);
         HasDate = false;
         Debug.Log("?!");
+        WaifuDateWeek = GameState;
+        DayChange();
     }
     IEnumerator DayCycle()
     {
@@ -284,6 +287,25 @@ public class GameHandler : MonoBehaviour {
             Debug.Log("Years have passed!?");
             GameState++;
             Weekday = 0;
+            if (GameState == 3)
+            {
+                if (WaifuDateWeek == 0)
+                {
+                    // Insert Grandkids Ending
+                }
+                if (WaifuDateWeek == 1)
+                {
+                    // Insert Kids Ending
+                }
+                if (WaifuDateWeek == 2)
+                {
+                    // Insert JustWaifu Ending
+                }
+                if (WaifuDateWeek == -1)
+                {
+                    // Insert Wizard Ending
+                }
+            }
         }
         if (Weekday == 6)
         {
@@ -291,9 +313,8 @@ public class GameHandler : MonoBehaviour {
             GameState++;
             Weekday = 0;
         }
-        Debug.Log("yeet" + Weekday);
+      
         StartCoroutine("DayCycle");
-        Debug.Log(Weekday);
         foreach (GameObject Waifu in Waifus)
         {
             Waifu.GetComponent<InteractableObject>().PersonInteractionPerDay = 1;
