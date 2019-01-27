@@ -394,6 +394,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Waifus: []
+  WorkScript: {fileID: 0}
   AtWork: 0
   EnergyBar: {fileID: 0}
   CashParticle: {fileID: 0}
@@ -1535,6 +1536,7 @@ GameObject:
   - component: {fileID: 421732023}
   - component: {fileID: 421732022}
   - component: {fileID: 421732025}
+  - component: {fileID: 421732026}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1555,6 +1557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 8
   WorkStation: {fileID: 137848362}
+  sr: {fileID: 421732025}
+  animator: {fileID: 421732026}
 --- !u!70 &421732023
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1635,6 +1639,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!95 &421732026
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421732021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &421732027
 Transform:
   m_ObjectHideFlags: 0
@@ -4948,7 +4970,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.72517866, y: 0.5}
-    oldSize: {x: 10.7, y: 5.24}
+    oldSize: {x: 10.83, y: 5.38}
     newSize: {x: 10.7, y: 5.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4973,7 +4995,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.72517866, y: 0.5}
-    oldSize: {x: 10.7, y: 5.24}
+    oldSize: {x: 10.83, y: 5.38}
     newSize: {x: 10.7, y: 5.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

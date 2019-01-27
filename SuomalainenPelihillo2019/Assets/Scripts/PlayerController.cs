@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour {
     AudioClip first;
     [SerializeField]
     AudioSource Sauce;*/
+
+    public SpriteRenderer sr;
+    public Animator animator;
+
+
     void Start () {
         instance = this;
 	}
@@ -22,6 +27,19 @@ public class PlayerController : MonoBehaviour {
             HandleMovementInput();
         //HandleRotationInput();
        
+    }
+
+    void Animate(float x, float y)
+    {
+        Debug.Log(x + "=x, y=" + y);
+        if (x > 0)
+            animator.Play("playerMoveTop");
+        else if (x < 0)
+            animator.Play("playerMoveSide");
+        if (y < 0)
+            sr.flipX = false;
+        else if (y > 0)
+            sr.flipX = true;
     }
     void HandleMovementInput()
     {
