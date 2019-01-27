@@ -8,6 +8,10 @@ public class PlayerController : MonoBehaviour {
     private float movementSpeed;
     [SerializeField]
     PlayerInputReader WorkStation;
+    /*[SerializeField] // SFX
+    AudioClip first;
+    [SerializeField]
+    AudioSource Sauce;*/
     void Start () {
         instance = this;
 	}

@@ -14,6 +14,10 @@ public class PlayerInputReader : MonoBehaviour {
     [SerializeField]
     ParticleSystem HavMoni;
     bool interacting;
+    /*[SerializeField] // SFX
+    AudioClip Coins;
+    [SerializeField]
+    AudioSource Sauce;*/
     // Use this for initialization
     void Start()
     {
@@ -23,16 +27,19 @@ public class PlayerInputReader : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate()
     {
-        exhaustion();
-        if (Working == true)
+        if (GM.AtWork == true)
         {
-            ReadKeys();
-            testResetEnergy();
-        }
-        if (interacting == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                Working = !Working;
+            exhaustion();
+            if (Working == true)
+            {
+                ReadKeys();
+               // testResetEnergy();
+            }
+            if (interacting == true)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                    Working = !Working;
+            }
         }
     }
 
@@ -68,6 +75,7 @@ public class PlayerInputReader : MonoBehaviour {
     void gibMunies()
     {
         GM.Money++;
+        //Sauce.PlayOneShot(Coins);
         HavMoni.Play();
         //Debug.Log("added one munies" + "(" + GM.Money + ")");
     }

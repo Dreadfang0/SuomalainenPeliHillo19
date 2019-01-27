@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameHandler : MonoBehaviour {
 
@@ -15,7 +16,8 @@ public class GameHandler : MonoBehaviour {
     GameObject[] HomeFurniture;
     [SerializeField]
     GameObject[] Waifus;
-
+    [SerializeField]
+    PlayerInputReader WorkScript;
     public bool AtWork;
     public GameObject EnergyBar;
     [SerializeField]
@@ -27,13 +29,14 @@ public class GameHandler : MonoBehaviour {
 	}
     void Update()
     {
+        EnergyBar.GetComponent<Slider>().value = WorkScript.energy;
         if (AtWork == true)
         {
-            //EnergyBar.SetActive(true);
+            EnergyBar.SetActive(true);
         }
         else
         {
-            //EnergyBar.SetActive(false);
+            EnergyBar.SetActive(false);
         }
     }
     public void FurnitureActivator(int Furniture)
