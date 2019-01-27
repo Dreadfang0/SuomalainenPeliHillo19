@@ -167,10 +167,10 @@ TextureImporter:
       name: homeWalls_2
       rect:
         serializedVersion: 2
-        x: 1792
-        y: 11
-        width: 1070
-        height: 524
+        x: 1784
+        y: 0
+        width: 1083
+        height: 538
       alignment: 9
       pivot: {x: 0.72517866, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,9 +188,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1774
+        y: 1772
         width: 2866
-        height: 274
+        height: 276
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,7 +209,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 7
-        width: 25
+        width: 14
         height: 2041
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -247,9 +247,9 @@ TextureImporter:
       name: homeWalls_5
       rect:
         serializedVersion: 2
-        x: 2851
+        x: 2846
         y: 2
-        width: 16
+        width: 21
         height: 1778
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -270,7 +270,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 2867
-        height: 40
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 13}
