@@ -11,6 +11,8 @@ public class GameHandler : MonoBehaviour {
     public int HomeOMeter;
     int PersonLikeYou;
     [SerializeField]
+    Text MoneyText;
+    [SerializeField]
     int DayLength;
     [SerializeField]
     GameObject[] HomeFurniture;
@@ -66,7 +68,7 @@ public class GameHandler : MonoBehaviour {
             // Sauce.StopSomething(WorkNoice);
             EnergyBar.SetActive(false);
         }
-        
+        MoneyText.text = ("$: "+Money);
     }
     public void FurnitureActivator(int Furniture)
     {
@@ -235,6 +237,7 @@ public class GameHandler : MonoBehaviour {
         yield return new WaitForSeconds(13);
         CutSceneCamera.SetActive(false);
         MainCamera.SetActive(true);
+        HasDate = false;
         Debug.Log("?!");
     }
     IEnumerator DayCycle()
