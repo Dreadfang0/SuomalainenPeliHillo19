@@ -43,9 +43,9 @@ public class GameHandler : MonoBehaviour {
     [SerializeField]
     AudioClip Music;
     [SerializeField]
-    AudioClip WorkNoice;
+    AudioClip WorkNoice;*/
     [SerializeField]
-    AudioSource Sauce;*/
+    AudioSource Sauce;
 
     void Start ()
     {
@@ -71,6 +71,7 @@ public class GameHandler : MonoBehaviour {
     public void FurnitureActivator(int Furniture)
     {
         CashParticle.Play();
+        Sauce.Play();
         if (Furniture == 0)
         {
             HomeFurniture[0].SetActive(true);

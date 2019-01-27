@@ -20,19 +20,11 @@ public class InteractableObject : MonoBehaviour {
     public int PersonInteractionPerDay;
     public PlayerInputReader Work;
     public GameHandler GM;
-   /* [SerializeField]  // Soundfx
-    AudioClip sold;
-    [SerializeField]
-    AudioClip kohvee;
-    [SerializeField]
-    AudioClip PersonTalk1;
-    [SerializeField]
-    AudioClip PersonTalk2;
-    [SerializeField]
-    AudioSource Sauce;*/
+    AudioSource Sauce;
+
     void Start ()
     {
-		
+        Sauce = GetComponent<AudioSource>();
 	}
     void Update()
     {
@@ -128,7 +120,6 @@ public class InteractableObject : MonoBehaviour {
                         GM.FurnitureActivator(FurnitureID);
                         Debug.Log("your furniture has done a thing");
                         GM.Money = GM.Money - FurnitureValue;
-                        //Sauce.PlayOneShot(sold);
                         gameObject.SetActive(false);
                     }
                     else
@@ -141,7 +132,7 @@ public class InteractableObject : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    //Sauce.PlayOneShot(kohvee);
+                    Sauce.Play();
                     Work.energy = Work.energyAmount;
                 }
             }
@@ -151,13 +142,11 @@ public class InteractableObject : MonoBehaviour {
                 {
                     if (PersonInteractionPerDay > 0)
                     {
-                        //Sauce.PlayOneShot(PersonTalk1);
                         GM.PersonInteraction(PersonID, false);
                         PersonInteractionPerDay--;
                     }
                     else
                     {
-                        //Sauce.PlayOneShot(PersonTalk2);
                         GM.PersonInteraction(PersonID, true);
                     }
                 }

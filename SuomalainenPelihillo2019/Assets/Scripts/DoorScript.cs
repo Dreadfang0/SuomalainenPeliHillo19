@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class DoorScript : MonoBehaviour {
 
     public Text InputText;
-    
     public Transform targetPosition;
+    AudioSource doorAudio;
+
 	// Use this for initialization
 	void Start ()
     {
-        
+        doorAudio = GetComponent<AudioSource>();
 	}
 
     void OnTriggerStay2D(Collider2D collision)
@@ -21,6 +22,7 @@ public class DoorScript : MonoBehaviour {
             InputText.text = ("[Space] to Exit");
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                doorAudio.Play();
                 new WaitForSeconds(2);
                 StartCoroutine("FadeToClear");
                 collision.transform.position = targetPosition.position;

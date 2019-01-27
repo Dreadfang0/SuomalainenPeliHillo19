@@ -18,10 +18,16 @@ public class PlayerInputReader : MonoBehaviour {
     AudioClip Coins;
     [SerializeField]
     AudioSource Sauce;*/
+
+    [SerializeField]
+    AudioClip[] keyboardSounds = new AudioClip[27];
+    AudioSource keyboardSoundSource;
+
     // Use this for initialization
     void Start()
     {
         energy = energyAmount;
+        keyboardSoundSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +61,8 @@ public class PlayerInputReader : MonoBehaviour {
                 }
 
                 usedKeys.Add(KeyPressed.ToString());
+                keyboardSoundSource.clip = keyboardSounds[Random.Range(0, 26)];
+                keyboardSoundSource.Play();
                 gibMunies();
             }
         }
