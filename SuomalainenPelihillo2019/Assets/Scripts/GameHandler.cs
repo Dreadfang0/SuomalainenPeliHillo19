@@ -19,6 +19,7 @@ public class GameHandler : MonoBehaviour {
     [SerializeField]
     PlayerInputReader WorkScript;
     public bool AtWork;
+    
     public GameObject EnergyBar;
     [SerializeField]
     ParticleSystem CashParticle;
@@ -159,6 +160,13 @@ public class GameHandler : MonoBehaviour {
         DayChange();
         
     }
+    IEnumerator WorkTime()
+    {
+        Debug.Log("Work Work");
+        yield return new WaitForSeconds(DayLength);
+        AtWork = false;
+        
+    }
     public void DayChange()
     {
         Weekday++;
@@ -174,6 +182,20 @@ public class GameHandler : MonoBehaviour {
         foreach (GameObject Waifu in Waifus)
         {
             Waifu.GetComponent<InteractableObject>().PersonInteractionPerDay = 1;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            AtWork = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            AtWork = false;
         }
     }
 }

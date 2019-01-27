@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61843933009184104}
   - component: {fileID: 114703387908098068}
   m_Layer: 0
-  m_Name: FurnitureInShop
+  m_Name: InteractableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
