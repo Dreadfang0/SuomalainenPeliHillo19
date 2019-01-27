@@ -6,35 +6,42 @@ public class NightToRemember : MonoBehaviour {
 
     [SerializeField]
     GameObject rotator;
+
     GameObject moon;
+
     [SerializeField]
     GameObject house;
+
     [SerializeField]
     ParticleSystem LoveGenerator;
 
     [SerializeField]
-    float cosmicRoationSpeed;
+    float cosmicRotationSpeed;
 
-	// Use this for initialization
-	void Start ()
-    {
-        cosmicRoationSpeed = 1;
+    [SerializeField]
+    Animator House;
+
+    void Awake()
+    {     
+        cosmicRotationSpeed = 1;
         moon = rotator.transform.GetChild(1).gameObject;
         rotator.transform.rotation = Quaternion.AngleAxis(10, Vector3.back);
         SceneLogic();
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
     {
-        rotator.transform.Rotate(0, 0, -cosmicRoationSpeed * Time.deltaTime);
-        moon.transform.Rotate(0, 0, cosmicRoationSpeed * Time.deltaTime);
+        rotator.transform.Rotate(0, 0, -cosmicRotationSpeed * Time.deltaTime);
+        moon.transform.Rotate(0, 0, cosmicRotationSpeed * Time.deltaTime);
+
+        if(LoveGenerator.isPlaying == false)
+        {
+            House.SetBool("Play", true);
+        }
 	}
 
     void SceneLogic()
     {
         LoveGenerator.Play();
-
-
     }
 }
