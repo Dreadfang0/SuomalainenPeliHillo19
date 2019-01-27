@@ -268,7 +268,7 @@ public class GameHandler : MonoBehaviour {
         HomeOMeter--;
         if (HasDate == true && Weekday == 5)
         {
-            //WaifuInHome.SetActive(true);
+            WaifuInHome.SetActive(true);
 
         }
         else if(Weekday == 5)
