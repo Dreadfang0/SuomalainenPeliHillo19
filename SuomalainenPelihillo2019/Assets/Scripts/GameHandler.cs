@@ -18,11 +18,16 @@ public class GameHandler : MonoBehaviour {
     GameObject[] Waifus;
     [SerializeField]
     GameObject WaifuInHome;
+    [SerializeField]
     bool HasDate;
     [SerializeField]
     PlayerInputReader WorkScript;
     public bool AtWork;
-    
+    [SerializeField]
+    GameObject MainCamera;
+    [SerializeField]
+    GameObject CutSceneCamera;
+
     public GameObject EnergyBar;
     [SerializeField]
     ParticleSystem CashParticle;
@@ -44,6 +49,8 @@ public class GameHandler : MonoBehaviour {
 
     void Start ()
     {
+        CutSceneCamera.SetActive(false);
+        MainCamera.SetActive(true);
         StartCoroutine("DayCycle");
 	}
     void Update()
@@ -203,7 +210,8 @@ public class GameHandler : MonoBehaviour {
             {
                 PersonLikeYou++;
                 Debug.Log("eyyyyy Lmao");
-                SingleHeartParticle.Play();
+                if(PersonLikeYou >= 2)
+                    SingleHeartParticle.Play();
                 if (PersonLikeYou == 3)
                 {
                     FullHeartParticle.Play();
@@ -214,26 +222,37 @@ public class GameHandler : MonoBehaviour {
             {
                 Debug.Log("Im bUsY");
             }
-            if (PersonLikeYou == 3)
-            {
-                FullHeartParticle.Play();
-                HasDate = true;
-            }
+            
         }
     }
-    void GoOnDate()
+    IEnumerator GoOnDate()
     {
         // Waifu cutscene or smth
-        new WaitForSeconds(5);
-        
+        Debug.Log("Meneekse tänne?");
+        CutSceneCamera.SetActive(true);
+        MainCamera.SetActive(false);
+        Debug.Log("?");
+        yield return new WaitForSeconds(13);
+        CutSceneCamera.SetActive(false);
+        MainCamera.SetActive(true);
+        Debug.Log("?!");
     }
     IEnumerator DayCycle()
     {
         Debug.Log("Start of a new day");
-        yield return new WaitForSeconds(DayLength);
+        Debug.Log("Go to work");
+
+        yield return new WaitForSeconds(DayLength / 20 *5);
+        Debug.Log("Work Time has started");
+        yield return new WaitForSeconds(DayLength / 10 * 6);
+        //Throw player out of work
+        AtWork = false;
+        Debug.Log("Shopping time");
+        yield return new WaitForSeconds(DayLength / 20 * 3);
+        Debug.Log("REEE "+Weekday);
         if (Weekday == 5)
         {
-            GoOnDate();
+            StartCoroutine(GoOnDate());
         }
         else
         {
@@ -241,13 +260,7 @@ public class GameHandler : MonoBehaviour {
         }
         
     }
-    IEnumerator WorkTime()
-    {
-        Debug.Log("Work Work");
-        yield return new WaitForSeconds(DayLength);
-        AtWork = false;
-        
-    }
+    
     public void DayChange()
     {
         Weekday++;
@@ -255,7 +268,7 @@ public class GameHandler : MonoBehaviour {
         HomeOMeter--;
         if (HasDate == true && Weekday == 5)
         {
-            WaifuInHome.SetActive(true);
+            //WaifuInHome.SetActive(true);
 
         }
         else if(Weekday == 5)
@@ -270,7 +283,9 @@ public class GameHandler : MonoBehaviour {
             GameState++;
             Weekday = 0;
         }
+        Debug.Log("yeet" + Weekday);
         StartCoroutine("DayCycle");
+        Debug.Log(Weekday);
         foreach (GameObject Waifu in Waifus)
         {
             Waifu.GetComponent<InteractableObject>().PersonInteractionPerDay = 1;
