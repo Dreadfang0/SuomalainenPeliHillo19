@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: ab5167207f62da54c879fca6f771170c
+guid: ab257cbe52112844b8a3076170ec17c7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Toimisto asetelma2_0
-    21300002: Toimisto asetelma2_1
-    21300004: Toimisto asetelma2_2
-    21300006: Toimisto asetelma2_3
-    21300008: Toimisto asetelma2_4
-    21300010: Toimisto asetelma2_13
-    21300012: Toimisto asetelma2_14
-    21300014: Toimisto asetelma2_15
-    21300016: Toimisto asetelma2_16
+    21300000: "Toimisto sein\xE4t2_0"
+    21300002: "Toimisto sein\xE4t2_1"
+    21300004: "Toimisto sein\xE4t2_2"
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -146,181 +140,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Toimisto asetelma2_0
+      name: "Toimisto sein\xE4t2_0"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 1150
-        width: 634
-        height: 554
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fb0b1bee098cfe449655ab18203b122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_1
-      rect:
-        serializedVersion: 2
-        x: 778
-        y: 1153
-        width: 629
-        height: 543
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8be8d5aae3ac46245874b64db68520b6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_2
-      rect:
-        serializedVersion: 2
-        x: 1928
-        y: 1536
-        width: 242
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0149fb35196b3540b695b3756c4e1ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 785
-        width: 108
-        height: 352
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9bb75f509e055245916ec2d6338ec6c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_4
-      rect:
-        serializedVersion: 2
-        x: 2582
-        y: 1025
-        width: 312
-        height: 493
+        x: 2212
+        y: 810
+        width: 808
+        height: 310
       alignment: 9
-      pivot: {x: 0.40318415, y: 0.5970122}
+      pivot: {x: 0.49643943, y: 0.045278832}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67ead3eddb6ca1b45a4041e5529a67a1
+      spriteID: 9c52cc9967e76f549b0a9c222d0151ea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toimisto asetelma2_13
+      name: "Toimisto sein\xE4t2_1"
       rect:
         serializedVersion: 2
-        x: 5
-        y: 160
-        width: 634
-        height: 547
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80082eb26aaaa97479a8a798e70616f9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_14
-      rect:
-        serializedVersion: 2
-        x: 784
-        y: 158
-        width: 635
-        height: 542
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8a9e27dd939e2c47a6cec224113ac19
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Toimisto asetelma2_15
-      rect:
-        serializedVersion: 2
-        x: 1579
-        y: 158
-        width: 326
-        height: 543
+        x: 2206
+        y: 1256
+        width: 167
+        height: 408
       alignment: 9
-      pivot: {x: 0.53088605, y: 0.39801386}
+      pivot: {x: 0.48277274, y: 0.39423504}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0a979d5b57fb4d498688764bcd57962
+      spriteID: 4d3f828e2ba35df48b342c46354703c7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toimisto asetelma2_16
+      name: "Toimisto sein\xE4t2_2"
       rect:
         serializedVersion: 2
-        x: 2587
-        y: 44
-        width: 168
-        height: 434
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2215
+        y: 183
+        width: 155
+        height: 391
+      alignment: 9
+      pivot: {x: 0.4628796, y: 0.39699426}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6068bbfaa49af6044a84a973880e2013
+      spriteID: 7c27387fb5177ec438b8788d17922c9b
       vertices: []
       indices: 
       edges: []
@@ -328,7 +202,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6367ba2786d2da947ac2f263b1b016a9
+    spriteID: 7ef7248983971384e9dab7d9cbf7f52c
     vertices: []
     indices: 
     edges: []
