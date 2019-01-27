@@ -59,6 +59,7 @@ public class GameHandler : MonoBehaviour {
 
     void Start ()
     {
+        fadeOverlay.StartCoroutine("FadeToClear");
         Player.transform.position = SpawnPoint.position;
         CutSceneCamera.SetActive(false);
         MainCamera.SetActive(true);
@@ -265,6 +266,7 @@ public class GameHandler : MonoBehaviour {
         Debug.Log("Work Time has started");
         yield return new WaitForSeconds(DayLength / 10 * 6);
         //Throw player out of work
+        fadeOverlay.StartCoroutine("FadeToClear");
         Player.transform.position = Shop.position;
         AtWork = false;
         Debug.Log("Shopping time");
