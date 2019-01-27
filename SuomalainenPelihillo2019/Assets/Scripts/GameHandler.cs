@@ -203,6 +203,11 @@ public class GameHandler : MonoBehaviour {
             HomeFurniture[25].SetActive(true);
             HomeOMeter++;
         }
+        if (Furniture == 26)
+        {
+            HomeFurniture[26].SetActive(true);
+            HomeOMeter++;
+        }
     }
     public void PersonInteraction(int Person, bool Busy)
     {
