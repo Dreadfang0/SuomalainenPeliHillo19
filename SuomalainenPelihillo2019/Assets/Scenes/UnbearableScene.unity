@@ -618,7 +618,7 @@ MonoBehaviour:
   Money: 0
   HomeOMeter: 0
   MoneyText: {fileID: 413896906}
-  DayLength: 10
+  DayLength: 20
   HomeFurniture:
   - {fileID: 305710434}
   - {fileID: 1890415604}
@@ -637,6 +637,9 @@ MonoBehaviour:
   CashParticle: {fileID: 1815422049}
   SingleHeartParticle: {fileID: 1436168392}
   FullHeartParticle: {fileID: 325334139}
+  Player: {fileID: 1629616883}
+  SpawnPoint: {fileID: 1157568807}
+  Shop: {fileID: 894379028}
 --- !u!4 &556647092
 Transform:
   m_ObjectHideFlags: 0
@@ -644,9 +647,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 556647089}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.61, y: 0, z: -10}
+  m_LocalPosition: {x: 2.61, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1157568807}
+  - {fileID: 894379028}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -770,6 +775,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &894379027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 894379028}
+  m_Layer: 0
+  m_Name: Shop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894379028
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894379027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 556647092}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &916223297
 Prefab:
@@ -1216,9 +1249,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1157568806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1157568807}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1157568807
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1157568806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 556647092}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1436168392 stripped
 ParticleSystem:
   m_PrefabParentObject: {fileID: 198568759894449130, guid: 11f37eb81e935d7468f8b1892268fd4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1881294462}
+--- !u!1 &1629616883 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1173319686901162, guid: 11f37eb81e935d7468f8b1892268fd4e,
     type: 2}
   m_PrefabInternal: {fileID: 1881294462}
 --- !u!1 &1629674193

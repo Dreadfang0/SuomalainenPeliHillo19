@@ -38,7 +38,14 @@ public class GameHandler : MonoBehaviour {
     ParticleSystem SingleHeartParticle;
     [SerializeField]
     ParticleSystem FullHeartParticle;
-
+    [SerializeField]
+    DoorScript fadeOverlay;
+    [SerializeField]
+    GameObject Player;
+    [SerializeField]
+    Transform SpawnPoint;
+    [SerializeField]
+    Transform Shop;
     /*
     // Soundfx
     [SerializeField]
@@ -52,6 +59,7 @@ public class GameHandler : MonoBehaviour {
 
     void Start ()
     {
+        Player.transform.position = SpawnPoint.position;
         CutSceneCamera.SetActive(false);
         MainCamera.SetActive(true);
         StartCoroutine("DayCycle");
@@ -257,6 +265,7 @@ public class GameHandler : MonoBehaviour {
         Debug.Log("Work Time has started");
         yield return new WaitForSeconds(DayLength / 10 * 6);
         //Throw player out of work
+        Player.transform.position = Shop.position;
         AtWork = false;
         Debug.Log("Shopping time");
         yield return new WaitForSeconds(DayLength / 20 * 3);
@@ -313,7 +322,8 @@ public class GameHandler : MonoBehaviour {
             GameState++;
             Weekday = 0;
         }
-      
+        fadeOverlay.StartCoroutine("FadeToClear");
+        Player.transform.position = SpawnPoint.position;
         StartCoroutine("DayCycle");
         foreach (GameObject Waifu in Waifus)
         {
