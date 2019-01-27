@@ -30,7 +30,7 @@ public class ObjectMonitor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Vector3.Distance(this.transform.position, player.position) < 2000.0f)
+		if (Vector3.Distance(this.transform.position, player.position) < 20.0f)
         {
             decideColliderToUse();
             decideSortingOrder();
@@ -38,7 +38,7 @@ public class ObjectMonitor : MonoBehaviour {
 	}
     void decideSortingOrder()
     {
-        SR.sortingOrder = (int)Camera.main.WorldToScreenPoint(this.transform.position).y * -1;
+        //SR.sortingOrder = (int)transform.position.y; // (int)Camera.main.WorldToScreenPoint(this.transform.position).y * -1;
     }
 
     void decideColliderToUse()

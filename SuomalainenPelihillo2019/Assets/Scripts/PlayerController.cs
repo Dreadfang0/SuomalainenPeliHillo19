@@ -19,14 +19,16 @@ public class PlayerController : MonoBehaviour {
 
     void Start () {
         instance = this;
-	}
-	
-	
-	void Update () {
+        sr = GetComponent<SpriteRenderer>();
+
+    }
+
+
+    void Update () {
         if(WorkStation.Working == false)
             HandleMovementInput();
         //HandleRotationInput();
-       
+        sr.sortingOrder = -(int)transform.position.y;
     }
 
     void Animate(float x, float y)
