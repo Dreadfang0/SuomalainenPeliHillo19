@@ -17,14 +17,32 @@ public class GameHandler : MonoBehaviour {
     [SerializeField]
     GameObject[] Waifus;
     [SerializeField]
+    GameObject WaifuInHome;
+    bool HasDate;
+    [SerializeField]
     PlayerInputReader WorkScript;
     public bool AtWork;
     
     public GameObject EnergyBar;
     [SerializeField]
     ParticleSystem CashParticle;
+    [SerializeField]
+    ParticleSystem SingleHeartParticle;
+    [SerializeField]
+    ParticleSystem FullHeartParticle;
 
-	void Start ()
+    /*
+    // Soundfx
+    [SerializeField]
+    AudioClip ShopMusic;
+    [SerializeField]
+    AudioClip Music;
+    [SerializeField]
+    AudioClip WorkNoice;
+    [SerializeField]
+    AudioSource Sauce;*/
+
+    void Start ()
     {
         StartCoroutine("DayCycle");
 	}
@@ -33,12 +51,15 @@ public class GameHandler : MonoBehaviour {
         EnergyBar.GetComponent<Slider>().value = WorkScript.energy;
         if (AtWork == true)
         {
+            // Sauce.PlaySomething(WorkNoice);
             EnergyBar.SetActive(true);
         }
         else
         {
+            // Sauce.StopSomething(WorkNoice);
             EnergyBar.SetActive(false);
         }
+        
     }
     public void FurnitureActivator(int Furniture)
     {
@@ -133,6 +154,46 @@ public class GameHandler : MonoBehaviour {
             HomeFurniture[17].SetActive(true);
             HomeOMeter++;
         }
+        if (Furniture == 18)
+        {
+            HomeFurniture[18].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 19)
+        {
+            HomeFurniture[19].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 20)
+        {
+            HomeFurniture[20].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 21)
+        {
+            HomeFurniture[21].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 22)
+        {
+            HomeFurniture[22].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 23)
+        {
+            HomeFurniture[23].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 24)
+        {
+            HomeFurniture[24].SetActive(true);
+            HomeOMeter++;
+        }
+        if (Furniture == 25)
+        {
+            HomeFurniture[25].SetActive(true);
+            HomeOMeter++;
+        }
     }
     public void PersonInteraction(int Person, bool Busy)
     {
@@ -142,22 +203,42 @@ public class GameHandler : MonoBehaviour {
             {
                 PersonLikeYou++;
                 Debug.Log("eyyyyy Lmao");
+                SingleHeartParticle.Play();
+                if (PersonLikeYou == 3)
+                {
+                    FullHeartParticle.Play();
+                    HasDate = true;
+                }
             }
             else
             {
                 Debug.Log("Im bUsY");
             }
-            if (PersonLikeYou == 5)
+            if (PersonLikeYou == 3)
             {
-
+                FullHeartParticle.Play();
+                HasDate = true;
             }
         }
+    }
+    void GoOnDate()
+    {
+        // Waifu cutscene or smth
+        new WaitForSeconds(5);
+        
     }
     IEnumerator DayCycle()
     {
         Debug.Log("Start of a new day");
         yield return new WaitForSeconds(DayLength);
-        DayChange();
+        if (Weekday == 5)
+        {
+            GoOnDate();
+        }
+        else
+        {
+            DayChange();
+        }
         
     }
     IEnumerator WorkTime()
@@ -172,7 +253,18 @@ public class GameHandler : MonoBehaviour {
         Weekday++;
         Debug.Log("Day "+Weekday+" has passed");
         HomeOMeter--;
-        if (Weekday == 7)
+        if (HasDate == true && Weekday == 5)
+        {
+            WaifuInHome.SetActive(true);
+
+        }
+        else if(Weekday == 5)
+        {
+            Debug.Log("Years have passed!?");
+            GameState++;
+            Weekday = 0;
+        }
+        if (Weekday == 6)
         {
             Debug.Log("Years have passed!?");
             GameState++;

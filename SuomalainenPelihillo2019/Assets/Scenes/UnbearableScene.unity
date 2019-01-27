@@ -412,6 +412,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &325334139 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198374894641042518, guid: 11f37eb81e935d7468f8b1892268fd4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1881294462}
 --- !u!1 &525207871
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,10 +551,13 @@ MonoBehaviour:
   - {fileID: 0}
   Waifus:
   - {fileID: 1073323052}
+  WaifuInHome: {fileID: 0}
   WorkScript: {fileID: 674744612}
   AtWork: 0
   EnergyBar: {fileID: 272124026}
   CashParticle: {fileID: 1815422049}
+  SingleHeartParticle: {fileID: 1436168392}
+  FullHeartParticle: {fileID: 325334139}
 --- !u!4 &556647092
 Transform:
   m_ObjectHideFlags: 0
@@ -1048,6 +1056,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &1436168392 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198568759894449130, guid: 11f37eb81e935d7468f8b1892268fd4e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1881294462}
 --- !u!1 &1629674193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1386,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1815422049 stripped
 ParticleSystem:
-  m_PrefabParentObject: {fileID: 198374894641042518, guid: 11f37eb81e935d7468f8b1892268fd4e,
+  m_PrefabParentObject: {fileID: 198022362349295706, guid: 11f37eb81e935d7468f8b1892268fd4e,
     type: 2}
   m_PrefabInternal: {fileID: 1881294462}
 --- !u!1001 &1881294462
